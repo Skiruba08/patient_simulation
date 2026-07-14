@@ -1,0 +1,60 @@
+# This .gitignore file should be placed at the root of your Unity project directory
+#
+# Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
+#
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# MemoryCaptures can get excessive in size.
+# They also could contain extremely sensitive data
+/[Mm]emoryCaptures/
+
+# Recordings can get excessive in size
+/[Rr]ecordings/
+
+# Unity3D generated file on crash reports
+sysinfo.txt
+
+/*.blob
+
+/Plugin/.build
+/Plugin/.xcodebuild
+
+*.csproj
+*.sln
+
+#########################################################
+### My custom lines below
+#########################################################
+
+# https://forum.unity.com/threads/uielementsschema.954252/
+UIElementsSchema
+
+
+#########
+# Probably OK if this stays for release
+Assets/Oculus/LipSync/Audio
+Assets/Oculus/LipSync/Scenes
+Assets/UI/images/icons.svg
+Assets/UI/images/icons.svg.meta
+
+#########
+Packages/com.unity.render-pipelines.high-definition-config
+
+#########
+# Oculus files. This file seems to not be needed. Is it embeded inside .dll?
+Assets/Oculus/LipSync/Assets/OfflineModel/ovrlipsync_offline_model.pb
+
+
+# Ignore actual config files
+config.yaml
+config_xtts.yaml
+server/config.py
+
+# But keep the example file (make sure it has NO real keys!)
+!config.example.yaml

@@ -1,0 +1,39 @@
+# python
+__pycache__
+env
+.venv
+
+# misc
+*.code-workspace
+.vscode
+
+# my
+_references
+voice_to_clone.wav
+out_speak_result.wav
+out_speaker_samples
+
+patient_context/
+
+
+# Unity generated folders anywhere in the repo
+**/[Ll]ibrary/
+**/[Tt]emp/
+**/[Oo]bj/
+**/[Ll]ogs/
+**/UserSettings/
+**/MemoryCaptures/
+**/Recordings/
+
+# Builds and generated output
+**/[Bb]uild/
+**/[Bb]uilds/
+**/*_BurstDebugInformation_DoNotShip/
+*.apk
+
+# IDE-generated files
+.vscode/
+**/.vscode/
+*.csproj
+*.sln
+*.slnx
