@@ -14,7 +14,7 @@ out_speak_result.wav
 out_speaker_samples
 
 patient_context/
-
+config_xtts.yaml
 
 # Unity generated folders anywhere in the repo
 **/[Ll]ibrary/
