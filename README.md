@@ -4,29 +4,28 @@
 
 This project is an early-stage **AI-powered patient simulation prototype** created to explore how conversational AI and immersive technology could support nursing education.
 
-The project includes two main prototype directions:
+The primary focus of this repository is an early **Unity/Oculus prototype** that explores how a virtual patient could eventually be presented in an immersive environment.
 
-* A **chat-based patient simulation**, where a learner can interact with an AI-powered virtual patient through conversation.
-* An early **Unity/Oculus prototype**, where a virtual patient image was displayed in a VR environment to explore how patient scenarios could eventually be presented immersively.
+The project also incorporates **patient interaction instructions developed for a separate chat-based prototype**. The complete chat interface itself is **not included in this repository**.
 
-The goal of the project was to experiment with different ways nursing students could interact with simulated patients in a safe learning environment.
+The goal of the project was to experiment with different approaches for creating AI-supported simulated patient experiences for nursing education.
 
-## Chat-Based Prototype
+## Patient Interaction Instructions
 
-The chat-based prototype allows users to communicate with a simulated patient using natural language.
+This project uses patient interaction instructions developed while experimenting with a separate **chat-based AI patient simulation**.
 
-The system is designed so that a learner can:
+These instructions were designed to guide an AI model in behaving like a simulated patient, including how the patient should:
 
-* Ask the virtual patient questions
-* Gather information about the patient's condition
-* Practice conversational assessment
-* Work through a simulated clinical interaction
+* Respond to learner questions
+* Provide relevant patient information
+* Maintain the role of the simulated patient
+* Support a clinical conversation without unnecessarily revealing information
 
-The prototype uses a configurable large language model through the settings provided in the configuration file.
+The full Streamlit chat interface and associated application are maintained separately and are **not part of this repository**.
 
 ## Text-to-Speech
 
-The project also includes support for text-to-speech using **XTTS v2**.
+The project includes support for text-to-speech using **XTTS v2**, allowing generated patient responses to potentially be converted into speech.
 
 Example configuration:
 
@@ -38,11 +37,11 @@ tts:
   language: 'en'
 ```
 
-The configuration also supports optional streaming and voice-cloning settings.
+The configuration also supports optional streaming and voice settings.
 
 ## LLM Configuration
 
-LLM settings are stored in the configuration file using placeholders:
+LLM settings can be configured locally using placeholders such as:
 
 ```yaml
 llm:
@@ -54,53 +53,61 @@ llm:
   top_p: 0.9
 ```
 
-Replace these values locally with the model and API service you are using.
+Replace these values locally with the appropriate model and API service.
 
 **Do not commit real API keys or private service credentials to the repository.**
 
 ## Unity / VR Exploration
 
-A separate Unity-based prototype was created to explore the immersive side of the project.
+A Unity-based prototype was created to explore how a simulated patient could eventually be presented in an immersive environment.
 
-During this stage, a virtual patient visual was successfully displayed through an **Oculus headset**. This served as an initial proof of concept for how a patient simulation could eventually be experienced in a VR environment.
+During this stage, a **virtual patient visual was successfully displayed through an Oculus headset**. This served as an initial proof of concept for presenting a virtual patient within VR.
 
-The VR portion should be considered an exploratory prototype rather than a complete interactive nursing simulation.
+The VR component is an **exploratory prototype** rather than a complete interactive nursing simulation. Full conversational interaction between the learner and the VR patient was not implemented in this prototype.
+
+## Prototype Architecture
+
+```mermaid
+flowchart LR
+    A[Patient Interaction Instructions] --> B[LLM]
+    B --> C[Generated Patient Response]
+    C --> D[Text-to-Speech]
+    D --> E[Unity Prototype]
+    E --> F[Oculus Headset]
+
+    G[Virtual Patient Visual] --> E
+```
+
+The diagram represents the overall prototype concept. The Unity/Oculus portion focused primarily on displaying the virtual patient, while the conversational interaction was explored separately.
 
 ## Technologies Explored
 
+* Unity
+* Oculus / Virtual Reality
 * Python
 * Large Language Models
 * Conversational AI
 * XTTS v2
 * Text-to-Speech
-* Unity
-* Oculus / Virtual Reality
 * AI-assisted healthcare education
 
 ## Project Context
 
 This project was developed during **Spring 2026 at UNC Charlotte** as part of an exploration of AI-supported nursing simulation.
 
-The experience focused on rapid prototyping and investigating how conversational AI and immersive environments could potentially be used to support healthcare education.
+The work focused on rapid prototyping and exploring how **AI-driven patient behavior, conversational interaction concepts, and immersive environments** could potentially be combined to support healthcare education.
 
+This repository represents the **Unity/VR exploration and supporting AI interaction components**. A separate prototype was developed to explore the full chat-based patient interaction experience.
 
 ## Attribution
 
-This project was adapted from the open-source
-[AI-Iris-Avatar](https://github.com/Scthe/ai-iris-avatar) project created by
-Marcin Matuszczyk (@Scthe).
+This project was adapted from the open-source [AI-Iris-Avatar](https://github.com/Scthe/ai-iris-avatar) project created by Marcin Matuszczyk (@Scthe).
 
-The original project provides an AI-powered 3D avatar architecture using
-large language models (LLMs), text-to-speech (TTS), Unity, and Oculus LipSync.
+The original project provides an AI-powered 3D avatar architecture using large language models (LLMs), text-to-speech (TTS), Unity, and Oculus LipSync.
 
-For this project, the original framework was explored and adapted as a
-prototype for AI-supported nursing education, including a chat-based patient
-interaction prototype and experimentation with displaying a virtual patient
-through an Oculus headset.
+For this project, components of the original framework were explored and adapted in the context of **AI-supported nursing simulation**, particularly for experimenting with presenting a virtual patient through an Oculus headset and exploring AI-driven patient interaction.
 
-The original AI-Iris-Avatar project is licensed under the GNU General Public
-License v3.0 (GPL-3.0). Please refer to the original repository and included
-license files for additional licensing and attribution requirements.
+The original AI-Iris-Avatar project is licensed under the **GNU General Public License v3.0 (GPL-3.0)**. Please refer to the original repository and included license files for additional licensing and attribution requirements.
 
 ## Disclaimer
 
