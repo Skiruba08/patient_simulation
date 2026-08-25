@@ -83,6 +83,31 @@ This project was developed during **Spring 2026 at UNC Charlotte** as part of an
 
 The experience focused on rapid prototyping and investigating how conversational AI and immersive environments could potentially be used to support healthcare education.
 
+```mermaid
+flowchart LR
+    A[User] --> B[Streamlit Interface<br/>Home.py]
+    B --> C[Knowledge Retrieval<br/>kb.py]
+    C --> D[Knowledge Base]
+    C --> E[LLM API<br/>llm_api.py]
+    E --> F[LLM]
+    F --> E
+    E --> B
+    B --> A
+```
+
+```mermaid
+flowchart LR
+    A[Open App] --> B[View Scenario]
+    B --> C[Enter Message]
+    C --> D[Retrieve Relevant Context]
+    D --> E[Send Context + Prompt to LLM]
+    E --> F[Generate Patient Response]
+    F --> G[Display Response]
+    G --> H{Continue?}
+    H -->|Yes| C
+    H -->|No| I[End Session]
+```
+
 ## Attribution
 
 This project was adapted from the open-source
