@@ -97,17 +97,20 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-    A[Open App] --> B[View Scenario]
-    B --> C[Enter Message]
-    C --> D[Retrieve Relevant Context]
-    D --> E[Send Context + Prompt to LLM]
-    E --> F[Generate Patient Response]
+    A[Open App] --> B[View Patient Scenario]
+    B --> C[Begin Simulation]
+    C --> D[Enter Message]
+    D --> E[Retrieve Relevant Context]
+    E --> F[Generate AI Patient Response]
     F --> G[Display Response]
-    G --> H{Continue?}
-    H -->|Yes| C
-    H -->|No| I[End Session]
-```
+    G --> H{Continue Conversation?}
 
+    H -->|Yes| D
+    H -->|No| I[End Simulation]
+
+    I --> J[Debrief]
+    J --> K[Performance Report]
+```
 ## Attribution
 
 This project was adapted from the open-source
