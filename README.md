@@ -83,6 +83,24 @@ This project was developed during **Spring 2026 at UNC Charlotte** as part of an
 
 The experience focused on rapid prototyping and investigating how conversational AI and immersive environments could potentially be used to support healthcare education.
 
+## Attribution
+
+This project was adapted from the open-source
+[AI-Iris-Avatar](https://github.com/Scthe/ai-iris-avatar) project created by
+Marcin Matuszczyk (@Scthe).
+
+The original project provides an AI-powered 3D avatar architecture using
+large language models (LLMs), text-to-speech (TTS), Unity, and Oculus LipSync.
+
+For this project, the original framework was explored and adapted as a
+prototype for AI-supported nursing education, including a chat-based patient
+interaction prototype and experimentation with displaying a virtual patient
+through an Oculus headset.
+
+The original AI-Iris-Avatar project is licensed under the GNU General Public
+License v3.0 (GPL-3.0). Please refer to the original repository and included
+license files for additional licensing and attribution requirements.
+
 ## Disclaimer
 
 This project is an **educational and research prototype**.
